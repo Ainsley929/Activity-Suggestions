@@ -29,7 +29,7 @@ const YesIntentHandler = {
 
     async handle(handlerInput) {
         const activity = await getSuggestion()
-        const reprompt = `<s>Would you like another suggestion?</s>`
+        const reprompt = `<p>Would you like another suggestion?</p>`
 
         return handlerInput.responseBuilder
             .speak(activity + reprompt)
